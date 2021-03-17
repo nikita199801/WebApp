@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+    <div class="container">
+        <form action="/posts/new" method="POST" class="my-5 d-flex flex-column align-items-start">
+            <h1>New Post</h1>
+            <input type="text" name="title" id="" placeholder="Title">
+            <textarea name="content" id="" cols="107" rows="3" class="my-3" placeholder="Your text"></textarea>
+            <input type="submit" value="Publish" class="btn btn-success">
+        </form>
+    </div>
+<%- include('partials/footer') %>

@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+    <div class="container">
+        <div class="input-group m-3 d-flex justify-content-center">
+            <form class="d-flex flex-column">
+                <h1>Register</h1>
+                <input type="email" class="form-control mb-2" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" name='email'>
+                <input type="text" class="form-control mb-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name='username'>
+                <input type="password" class="form-control mb-2" name='password' placeholder="Password">
+                <input type="text" class="form-control mb-2" placeholder="Photo" name='photo'>
+                <input type="submit" value="Register" formaction="/user/new" formmethod="POST">
+            </form>
+        </div>
+    </div>
+<%- include('partials/footer') %>

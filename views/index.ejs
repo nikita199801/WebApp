@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+    <div class="container d-flex flex-column align-items-start my-5">
+        <% if (!login_status) { %>
+            <h1>Hi <%= user %>, you should login or register to leave posts the <a href="/posts">wall!</a></h1>
+            <a href="/user" class="btn btn-primary btn-lg active my-3" role="button" aria-pressed="true">Register</a>
+            <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+        <% } else {%>
+            <h1>Hi <%= user %>, check my <a href="/posts">wall</a></h1>
+            <a href="/user/<%= id%>" class="btn btn-primary btn-lg active my-2" role="button" aria-pressed="true">My Profile</a>
+            <form action="/user/<%= id%>/logout" , method="POST">
+                <input type="submit" value="Logout" class="btn btn-danger">
+            </form>
+        <% }%>
+    </div>
+<%- include('partials/footer') %>

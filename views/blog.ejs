@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+    <div class="container">
+        <% posts.forEach(post => { %>
+            <div class="card m-5">
+                <div class="card-header">
+                   Created by <%= post.username %>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><%= post.title%></h5>
+                  <p class="card-text"><%= post.content%></p>
+                </div>
+            </div>
+        <%})%>
+        <% if (!(user === 'guest')){ %>
+            <a href="/posts/new" class="btn btn-primary btn-lg active my-3" role="button" aria-pressed="true">New Post</a>
+        <% } %>
+    </div>
+<%- include('partials/footer') %>

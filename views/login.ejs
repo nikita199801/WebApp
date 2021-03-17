@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+    <div class="container">
+        <div class="input-group m-3 d-flex justify-content-center">
+            <form class="d-flex flex-column">
+                <h1>Login</h1>
+                <input type="text" class="form-control mb-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name='username'>
+                <input type="password" class="form-control mb-2"  aria-label="Username" aria-describedby="basic-addon1" name='password' placeholder="Password">
+                <input type="submit" value="Login" formaction="/login" formmethod="POST" >
+            </form>
+        </div>
+    </div>
+<%- include('partials/footer') %>

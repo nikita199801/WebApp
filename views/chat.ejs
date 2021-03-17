@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+    <style>
+        .content{
+            margin: 0 auto;
+            background-color: aquamarine;
+            height: 500px;
+            width: 50%;
+        }
+        .ipt {
+            margin: 30px auto;
+            width: 50%;
+        }
+    </style>
+    <div class="content">
+        sdasdsa
+    </div>
+    <div class="ipt">
+        <form action="/home/wall/sendmsg" method="POST">
+            <textarea name="message" id="" cols="107" rows="3"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+<%- include('partials/footer') %>
